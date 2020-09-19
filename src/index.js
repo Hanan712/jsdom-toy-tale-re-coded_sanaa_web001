@@ -44,14 +44,14 @@ function addNewToy() {
 function submitToys(name,image, likes = 0) {
 
   return fetch("http://localhost:3000/toys", {
-    method: "POST", 
+    method: "POST",
     headers: {
-      "Content-Type": "application/json", 
+      "Content-Type": "application/json",
       "Accept": "application/json"
-    }, 
+    },
     body: JSON.stringify({
-      name, 
-      image, 
+      name,
+      image,
       likes
     })
   })
@@ -69,11 +69,11 @@ function submitToys(name,image, likes = 0) {
     // debugger;
      fetch(`http://localhost:3000/toys/${int}`, {
       method: "PATCH",
-      headers: 
+      headers:
       {
         "Content-Type": "application/json",
         Accept: "application/json"
-      }, 
+      },
       body: JSON.stringify({
         "likes": numToUpdate
       })
